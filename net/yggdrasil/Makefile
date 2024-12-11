@@ -1,12 +1,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=yggdrasil
-PKG_VERSION:=0.5.5
+PKG_VERSION:=0.5.10
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://codeload.github.com/yggdrasil-network/yggdrasil-go/tar.gz/v$(PKG_VERSION)?
-PKG_HASH:=cdbb56b19b91b828afa282554862efb2a79dd4ada26dfb5a7bf3b0c5220f6c17
+PKG_HASH:=6082dc5efa107aa5eb2e95f0d6beaf5057ebac871858b42d9043d83f57f54f94
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-go-$(PKG_VERSION)
 
 PKG_MAINTAINER:=William Fleurant <meshnet@protonmail.com>
@@ -38,12 +38,6 @@ endef
 
 define Package/yggdrasil/description
  Yggdrasil builds end-to-end encrypted networks with IPv6.
- Beyond the similarities with cjdns is a different routing
- algorithm. This globally-agreed spanning tree uses greedy
- routing in a metric space. Back-pressure routing techniques
- allow advanced link aggregation bonding on per-stream basis.
- In turn, a single stream will span across multiple network
- interfaces simultaneously with much greater throughput.
 endef
 
 define Package/yggdrasil/install

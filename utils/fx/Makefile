@@ -1,12 +1,12 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=fx
-PKG_VERSION:=33.0.0
+PKG_VERSION:=35.0.0
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://codeload.github.com/antonmedv/fx/tar.gz/$(PKG_VERSION)?
-PKG_HASH:=b619c18a3cbc7566be1c7fecfc802d469402cf8eae6a70911359c4de7eab07ba
+PKG_HASH:=5ab642bb91ad9c1948de1add2d62acec22d82398e420957c191c1549999eb351
 
 PKG_MAINTAINER:=Fabian Lipken <dynasticorpheus@gmail.com>
 PKG_LICENSE:=MIT

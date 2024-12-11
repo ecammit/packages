@@ -9,11 +9,11 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=qemu
-PKG_VERSION:=8.2.0
-PKG_RELEASE:=1
+PKG_VERSION:=9.1.0
+PKG_RELEASE:=2
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
-PKG_HASH:=bf00d2fa12010df8b0ade93371def58e632cb32a6bfdc5f5a0ff8e6a1fb1bf32
-PKG_SOURCE_URL:=http://download.qemu.org/
+PKG_HASH:=816b7022a8ba7c2ac30e2e0cf973e826f6bcc8505339603212c5ede8e94d7834
+PKG_SOURCE_URL:=https://download.qemu.org/
 PKG_LICENSE:=GPL-2.0-only
 PKG_LICENSE_FILES:=LICENSE tcg/LICENSE
 PKG_MAINTAINER:=Yousong Zhou <yszhou4tech@gmail.com>
@@ -154,7 +154,7 @@ define Package/qemu-keymaps
   CATEGORY:=Utilities
   SUBMENU:=Virtualization
   TITLE:=QEMU reverse keymaps for use with -k argument
-  URL:=http://www.qemu.org
+  URL:=https://www.qemu.org
   DEPENDS:=$(QEMU_DEPS_IN_HOST)
 endef
 
@@ -361,7 +361,6 @@ CONFIGURE_ARGS +=			\
 CONFIGURE_ARGS +=			\
 	--enable-coroutine-pool		\
 	--enable-crypto-afalg		\
-	--enable-live-block-migration	\
 	--enable-membarrier		\
 	--enable-replication		\
 	--enable-lto			\
@@ -414,7 +413,6 @@ CONFIGURE_ARGS +=			\
 	--disable-numa			\
 	--disable-opengl		\
 	--disable-plugins		\
-	--disable-pvrdma		\
 	--disable-qom-cast-debug	\
 	--disable-rbd			\
 	--disable-rdma			\
